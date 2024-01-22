@@ -1,0 +1,13 @@
+---
+- name: ashokplaybook
+  hosts: all
+  tasks:
+  - name: copyfromhosttotargete
+    copy: 
+      src: /root/a
+      dest: /home/ubuntu/
+  - name: installingpackege
+    apt: 
+      name: git
+      state: latest     
+

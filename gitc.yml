@@ -1,0 +1,16 @@
+---
+- name: git_clone
+  hosts: ashok1
+  become: yes
+  tasks:
+  - name: shellcomm
+    shell: rm -rf /home/ubuntu/tomct 
+  - name: Git checkout
+    ansible.builtin.git:
+      repo: 'https://github.com/avpaws4441/tomct.git'
+      dest: /home/ubuntu/tomct
+      clone: yes
+      update: yes
+  - name: shell_to_ru_tomcat9
+    shell: sh /home/ubuntu/tomct/tomcat9.sh
+       

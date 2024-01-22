@@ -1,0 +1,7 @@
+---
+- name: copy
+  hosts: ashok1
+  become: yes
+  tasks:
+  - name: shell  
+    shell: sh /home/ubuntu/tomct/copy.sh
